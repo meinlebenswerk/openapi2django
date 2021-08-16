@@ -3,7 +3,7 @@ A NodeJS based generator, which takes in a swagger api - documentation and build
 It was built as a quick way to kickstart the project development for my bachelor's thesis (A web-service for accessing and working with medical data based on Vue/Django).\
 A such, this project is very minimal, and tailored to this specific use-case.
 
-### Generated structure
+### Generated structure (aka How and Why)
 The Script is mainly meant to generate:
 - api-views (**views.py**)
 - url-routing (**urls.py**)
@@ -24,9 +24,27 @@ I attempted to implement automatic generation of <b>Serializers</b> based on the
 a) fairly complicated to do :)\
 b) uneccessary for our project
 
+### Running the generator
+
+#### Prerequisites
+A running ``node`` + ``npm`` installation (I'm guessing any new enough version should suffice)
+
+### Generating files
+
+- Simply clone the project
+- Install any dependencies with ``npm install`` / ``npm i``
+- adjust the input path in line ``7`` to your swagger/openapi definition (either .yaml or .json should work)
+- run the script with ``node generator.js``
+- copy the generated ``views.py`` and ``urls.py`` into your Django project
+- ???
+- Profit
+
+That should be it!
+
 ### Notes
 This script is fairly specific, to our project's structure, i reckon.\
-I really don't know about performance, I'm guessing it won't be too bad, but don't quote me on that ;)
+I really don't know about performance, I'm guessing it won't be too bad, but don't quote me on that ;)\
+Yes, I know 'hardcoded' paths are not nice, but this was a quick and simple solution, forgive me :)
 
 
 
